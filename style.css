@@ -1,12 +1,16 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
 }
 
 /* NAVBAR */
 header {
-    background: #111;
-    color: white;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
     padding: 15px;
 }
 
@@ -17,12 +21,12 @@ nav {
 }
 
 .logo {
-    margin: 0;
+    font-size: 20px;
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     list-style: none;
 }
 
@@ -38,49 +42,68 @@ nav {
 
 /* HERO */
 .hero {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    color: white;
-    text-align: center;
+    padding-left: 10%;
+}
+
+.hero h2 {
+    font-size: 50px;
+}
+
+.hero h3 {
+    color: #00f2fe;
+}
+
+.hero p {
+    max-width: 500px;
+    margin-top: 10px;
+    opacity: 0.8;
 }
 
 .hero button {
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 12px 25px;
     border: none;
-    background: black;
-    color: white;
+    background: #00f2fe;
+    color: black;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .hero button:hover {
-    background: #333;
+    background: #00c6d7;
 }
 
 /* SECTIONS */
 .section {
-    padding: 80px 20px;
-    text-align: center;
+    padding: 100px 10%;
 }
 
-/* PROJECT CARDS */
+/* PROJECT GRID */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
 .project-card {
-    background: #f4f4f4;
-    margin: 20px auto;
+    background: #111;
     padding: 20px;
-    width: 60%;
     border-radius: 10px;
     transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-    background: #e0f7fa;
+    transform: translateY(-10px);
+    background: #1a1a1a;
+}
+
+.project-card span {
+    font-size: 12px;
+    color: #00f2fe;
 }
 
 /* FORM */
@@ -88,27 +111,26 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 300px;
-    margin: auto;
+    max-width: 400px;
 }
 
 input, textarea {
-    padding: 10px;
+    padding: 12px;
+    background: #111;
+    border: none;
+    color: white;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+    background: #000;
 }
 
 /* MOBILE */
 .menu-toggle {
     display: none;
-    font-size: 25px;
-    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -116,14 +138,30 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        text-align: center;
     }
 
     .menu-toggle {
         display: block;
+        font-size: 25px;
     }
 
-    .project-card {
-        width: 90%;
+    .hero {
+        padding-left: 5%;
     }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+}
+
+/* FADE ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
