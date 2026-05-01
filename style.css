@@ -16,6 +16,10 @@ nav {
     align-items: center;
 }
 
+.logo {
+    margin: 0;
+}
+
 .nav-links {
     display: flex;
     gap: 20px;
@@ -25,6 +29,11 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00f2fe;
 }
 
 /* HERO */
@@ -46,11 +55,16 @@ nav {
     background: black;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #333;
 }
 
 /* SECTIONS */
 .section {
-    padding: 50px;
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -66,6 +80,7 @@ nav {
 
 .project-card:hover {
     transform: scale(1.05);
+    background: #e0f7fa;
 }
 
 /* FORM */
@@ -77,6 +92,18 @@ form {
     margin: auto;
 }
 
+input, textarea {
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
 /* MOBILE */
 .menu-toggle {
     display: none;
@@ -85,9 +112,11 @@ form {
 }
 
 @media (max-width: 768px) {
+
     .nav-links {
         display: none;
         flex-direction: column;
+        text-align: center;
     }
 
     .menu-toggle {
