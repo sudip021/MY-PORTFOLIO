@@ -1,11 +1,11 @@
-// Scroll animation
-const sections = document.querySelectorAll(".section");
+// Scroll reveal
+const elements = document.querySelectorAll(".section");
 
 window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
-      sec.style.opacity = 1;
-      sec.style.transform = "translateY(0)";
+  elements.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
     }
   });
 });
