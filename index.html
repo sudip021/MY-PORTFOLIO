@@ -1,38 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Sudip Haldar</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
+<!-- NAV -->
+<nav class="nav">
   <h2>Sudip</h2>
   <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Hi, I'm Sudip Haldar</h1>
+  <h1>Sudip Haldar</h1>
   <h2>AI/ML & Cloud Engineer</h2>
-  <p>
-    I build intelligent systems using Machine Learning, Cloud Computing, and scalable backend technologies.
-  </p>
+  <p>Building intelligent systems using Machine Learning, Cloud, and scalable backend technologies.</p>
+</section>
 
-  <div>
-    <a href="projects.html" class="btn">View Projects</a>
-    <a href="contact.html" class="btn outline">Contact</a>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About</h2>
+  <p>
+    I am a Computer Science student focused on AI, Cloud Computing, and backend systems.
+    I build real-world solutions combining machine learning and scalable cloud infrastructure.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+  <h2>Tech Stack</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>Machine Learning</span>
+    <span>Docker</span>
+    <span>Google Cloud</span>
+    <span>FastAPI</span>
   </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="card">
+
+    <h3>ML Risk Prediction API</h3>
+    <p>Deployed ML model using FastAPI and Docker.</p>
+
+    <div class="inputs">
+      <input id="age" placeholder="Age">
+      <input id="income" placeholder="Income">
+      <input id="credit" placeholder="Credit Score">
+      <input id="loan" placeholder="Loan Amount">
+    </div>
+
+    <button onclick="predict()">Predict</button>
+
+    <p id="result"></p>
+
+    <div class="links">
+      <a href="https://ml-cloud-project.onrender.com/docs">Live API</a>
+      <a href="https://github.com/sudip021/ml-cloud-project">GitHub</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: sudiphaldar4782@gmail.com</p>
+  <p>GitHub: github.com/sudip021</p>
 </section>
 
 <footer>
   <p>© 2026 Sudip Haldar</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
