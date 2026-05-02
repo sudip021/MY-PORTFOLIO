@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sudip Haldar</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Sudip Haldar</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <h2>Sudip</h2>
   <div>
@@ -18,16 +17,11 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Sudip Haldar</h1>
     <h2>AI/ML & Cloud Engineer</h2>
-
-    <p>
-      I build intelligent systems using Machine Learning, Cloud Computing,
-      and scalable backend technologies.
-    </p>
+    <p>I build intelligent scalable systems using ML + Cloud.</p>
 
     <div class="hero-buttons">
       <a href="#projects">View Work</a>
@@ -36,71 +30,82 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
   <h2>About</h2>
-
   <p>
-    I am a Computer Science student specializing in AI & Machine Learning.
-    I focus on building scalable cloud-based systems and intelligent applications.
+    I am focused on building production-level AI systems and deploying them on cloud infrastructure.
   </p>
-
 </section>
 
-<!-- SKILLS -->
-<section class="section">
-  <h2>Tech Stack</h2>
-
-  <div class="skills">
-    <span>Python</span>
-    <span>Machine Learning</span>
-    <span>Docker</span>
-    <span>Google Cloud</span>
-    <span>FastAPI</span>
-  </div>
-</section>
-
-<!-- PROJECT -->
+<!-- CASE STUDY PROJECT -->
 <section id="projects" class="section">
 
-  <h2>Projects</h2>
+<h2>Featured Project</h2>
 
+<div class="project-case">
+
+  <h3>ML Loan Risk Prediction System</h3>
+
+  <div class="case-grid">
+
+    <div>
+      <h4>Problem</h4>
+      <p>
+        Banks struggle to predict whether a customer will default on a loan.
+      </p>
+    </div>
+
+    <div>
+      <h4>Solution</h4>
+      <p>
+        Built a machine learning model using Logistic Regression to classify loan risk.
+      </p>
+    </div>
+
+    <div>
+      <h4>Tech Stack</h4>
+      <p>
+        Python, FastAPI, Docker, Render Deployment
+      </p>
+    </div>
+
+    <div>
+      <h4>Result</h4>
+      <p>
+        Deployed a live API that predicts risk in real-time.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- LIVE DEMO -->
   <div class="card">
 
-    <h3>ML Risk Prediction API</h3>
+    <h3>Try Live Prediction</h3>
 
-    <p>
-      Real-time machine learning API deployed using FastAPI and Docker.
-    </p>
-
-    <div class="inputs">
-      <input id="age" placeholder="Age">
-      <input id="income" placeholder="Income">
-      <input id="credit" placeholder="Credit Score">
-      <input id="loan" placeholder="Loan Amount">
-    </div>
+    <input id="age" placeholder="Age">
+    <input id="income" placeholder="Income">
+    <input id="credit" placeholder="Credit Score">
+    <input id="loan" placeholder="Loan Amount">
 
     <button onclick="predict()">Predict</button>
 
     <p id="result"></p>
 
     <div class="links">
-      <a href="https://ml-cloud-project.onrender.com/docs">Live API</a>
+      <a href="https://ml-cloud-project.onrender.com/docs">API Docs</a>
       <a href="https://github.com/sudip021/ml-cloud-project">GitHub</a>
     </div>
 
   </div>
 
+</div>
+
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
-
   <h2>Contact</h2>
-
   <p>Email: sudiphaldar4782@gmail.com</p>
-  <p>GitHub: github.com/sudip021</p>
-
 </section>
 
 <footer>
